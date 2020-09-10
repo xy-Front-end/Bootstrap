@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <h2>bootstrap默认表单</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="username">用户名:</label>
+                        <input class="form-control" type="text" id="username" placeholder="用户名" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">密码:</label>
+                        <input class="form-control" type="password" id="password" placeholder="密码">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <h2>水平排列的表单</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="username2" class="col-md-2 control-label">用户名:</label>
+                        <div class="col-md-10">
+                            <input class="form-control" type=" text" id="username2" placeholder="用户名" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password2" class="col-md-2 control-label">密码:</label>
+                        <div class="col-md-10">
+
+                            <input class="form-control" type="password" id="password2" placeholder="密码">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-10 col-md-offset-2">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">记住我
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>内联表单，小于768px的时候会换行，大于的时候会变成一行</h2>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="username1">用户名</label>
+                        <input id="username1" type="text" class="form-control" placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password1">用户名</label>
+                        <input id="password1" type="text" class="form-control" placeholder="用户名">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <h3>水平表单</h3>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Remember me
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+            </div>
+        </form>
+
+        <h3>带图标</h3>
+        <div class="row">
+            <div class="col-sm-12">
+                <form class="form-horizontal">
+                    <div class="form-group has-feedback has-success">
+                        <label for="username001" class="col-sm-2 control-label">用户名</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="username001" placeholder="用户名" />
+                            <span class="glyphicon glyphicon-euro form-control-feedback"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group has-error has-feedback">
+                        <label class="control-label col-sm-2" for="inputSuccess3">Input with success</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputSuccess3"
+                                aria-describedby="inputSuccess3Status">
+                            <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                            <span id="inputSuccess3Status" class="sr-only">(success)</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group  has-warning has-feedback">
+                        <label for="password0011" class="control-label">密码</label>
+                        <!-- 放入了input-group，所以点击之后，图标才会消失 -->
+                        <div class="input-group">
+                            <span class="input-group-addon">@</span>
+                            <input type="text" class="form-control input-sm" id="password0011" />
+                        </div>
+                        <span class="glyphicon glyphicon-euro form-control-feedback"></span>
+                    </div>
+
+                    <div class="form-group has-success has-feedback">
+                        <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+                        <!-- <div class="input-group"> -->
+                        <!-- <span class="input-group-addon">@</span> -->
+                        <input type="text" class="form-control" id="inputGroupSuccess1">
+                        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        <!-- </div> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -3,16 +3,222 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>栅格系统</title>
     <link rel="stylesheet" href="../resources/css/bootstrap.css">
+    <style>
+        div {
+            border: 1px solid;
+        }
+    </style>
 </head>
+
 <body>
+    <!-- 
+        问题：
+          1，弄清楚什么时候一行会换行？会换几行？换行后会不会有浮动现象？如何清除？
+          2，大中小超小变化的时候换行，避免出现浮动现象最好的解决办法是大屏必须是偶数，是所有不同屏幕列的公倍数。
+            比如一行大屏是6列，中屏变成3列，小屏变成2列，超小变成1列。
+            而不是lg-6，md-4，sm-3，xs-2
+          3, 注意栅格列有些内容太多的时候造成的浮动
+     -->
     <div class="container">
         <div class="row">
+            <div class="col-lg-3 col-md-4">红红火火1</div>
+            <div class="col-lg-3 col-md-4">红红火火2</div>
+            <div class="col-lg-3 col-md-4">红红火火3</div>
+            <div class="col-lg-3 col-md-4">红红火火4</div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">row2</div>
+            <div class="col-sm-2">row2</div>
+            <div class="col-sm-2">row2</div>
+            <div class="col-sm-2">row2</div>
+            <div class="col-sm-2">row2</div>
+            <div class="col-sm-2">row2</div>
+        </div>
+
+        <div class="row">
+            <div class=" col-lg-3 col-md-6 col-sm-12">
+                <table class="table .table-bordered .table-striped">
+                    <thead>
+                        <th>h1</th>
+                        <th>h2</th>
+                        <th>h3</th>
+                        <th>h4</th>
+                        <th>h5</th>
+                        <th>h6</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>data1</td>
+                            <td>data2</td>
+                            <td>data3</td>
+                            <td>data4</td>
+                            <td>data5</td>
+                            <td>data6</td>
+                        </tr>
+                        <tr>
+                            <td>data1</td>
+                            <td>data2</td>
+                            <td>data3</td>
+                            <td>data4</td>
+                            <td>data5</td>
+                            <td>data6</td>
+                        </tr>
+                        <tr>
+                            <td>data1</td>
+                            <td>data2</td>
+                            <td>data3</td>
+                            <td>data4</td>
+                            <td>data5</td>
+                            <td>data6</td>
+                        </tr>
+                        <tr>
+                            <td>data1</td>
+                            <td>data2</td>
+                            <td>data3</td>
+                            <td>data4</td>
+                            <td>data5</td>
+                            <td>data6</td>
+                        </tr>
+                        <tr>
+                            <td>data1</td>
+                            <td>data2</td>
+                            <td>data3</td>
+                            <td>data4</td>
+                            <td>data5</td>
+                            <td>data6</td>
+                        </tr>
+                        <tr>
+                            <td>data1</td>
+                            <td>data2</td>
+                            <td>data3</td>
+                            <td>data4</td>
+                            <td>data5</td>
+                            <td>data6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class=" col-lg-3 col-md-6 col-sm-12">
+                <table class="table .table-bordered .table-striped">
+                    <thead>
+                        <th>h1</th>
+                        <th>h2</th>
+                        <th>h3</th>
+                        <th>h4</th>
+                        <th>h5</th>
+                        <th>h6</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>data1</td>
+                            <td>data2</td>
+                            <td>data3</td>
+                            <td>data4</td>
+                            <td>data5</td>
+                            <td>data6</td>
+                        </tr>
+                        <tr>
+                            <td>data1</td>
+                            <td>data2</td>
+                            <td>data3</td>
+                            <td>data4</td>
+                            <td>data5</td>
+                            <td>data6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="clearfix visible-md"></div>
+            <div class=" col-lg-3 col-md-6 col-sm-12">
+                <table class="table .table-bordered ">
+                    <thead>
+                        <th>h1</th>
+                        <th>h2</th>
+                        <th>h3</th>
+                        <th>h4</th>
+                        <th>h5</th>
+                        <th>h6</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>data1</td>
+                            <td>data2</td>
+                            <td>data3</td>
+                            <td>data4</td>
+                            <td>data5</td>
+                            <td>data6</td>
+                        </tr>
+                        <tr>
+                            <td>data1</td>
+                            <td>data2</td>
+                            <td>data3</td>
+                            <td>data4</td>
+                            <td>data5</td>
+                            <td>data6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class=" col-lg-3 col-md-6 col-sm-12">
+                <table class="table .table-bordered ">
+                    <thead>
+                        <th>h1</th>
+                        <th>h2</th>
+                        <th>h3</th>
+                        <th>h4</th>
+                        <th>h5</th>
+                        <th>h6</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>data1</td>
+                            <td>data2</td>
+                            <td>data3</td>
+                            <td>data4</td>
+                            <td>data5</td>
+                            <td>data6</td>
+                        </tr>
+                        <tr>
+                            <td>data1</td>
+                            <td>data2</td>
+                            <td>data3</td>
+                            <td>data4</td>
+                            <td>data5</td>
+                            <td>data6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+        <!-- 
             
+            1，如果最大行的列数是偶数C，那么其他屏幕的行*列要满足: a * b= c
+                以下面的为例子：
+            2，如果最大行的列数是奇数，那么就要设置小于某屏幕的时候列数=12了
+        -->
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">data1</div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">data2</div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">data3</div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">data4</div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">data5</div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">data6</div>
         </div>
     </div>
+
 </body>
 
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式基础@media</title>
+    <style>
+        @media screen and (max-width: 768px) {
+            body {
+                background-color: red;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            body {
+                background-color: blue;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            body {
+                background-color: fuchsia;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        需求：
+            width:
+                1，width<768px，body背景红色
+                2，768px<=width<992px，背景蓝色
+                3，992px<=width<1200px，背景绿色
+                4，width>=1200px，背景紫色
+     -->
+    <div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉菜单</title>
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- 
+                1. 大盒子:.dropdown/dropup
+                2. 按钮:
+                    .dropdown-toggle
+                    data-toggle=dropdown
+                3. 下拉内容ul: dropdown-menu
+             -->
+            <div class="dropdown" style="top: 300px">
+
+                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                    选择专业 &nbsp;
+                    <span class="caret"></span>
+                </button>
+
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header">语言</li>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li class="divider"></li>
+                    <li class="disabled"><a href="#">信息安全</a></li>
+                    <li><a href="#">网络工程</a></li>
+                </ul>
+            </div>
+
+            <!-- 按钮下拉菜单 -->
+            <div class="btn-group">
+
+                <button class="btn btn-warning dropdown-toggle btn-lg" data-toggle="dropdown">
+                    Warning&nbsp;
+                    <span class="caret"></span>
+                </button>
+
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+
+            <div class="btn-group dropup">
+
+                <button class="btn btn-warning  btn-lg">Action</button>
+                <button class="btn btn-warning dropdown-toggle  btn-lg" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../resources/js/jquery.js"></script>
+    <script src="../resources/js/bootstrap.js"></script>
+</body>
+
+</html>

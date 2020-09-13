@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal模态框</title>
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+</head>
+
+<body>
+    <!-- 
+        使用方法：
+            1，modal fade
+            2, modal-dialog
+            3, modal-content
+                1, modal-header
+                2, modal-body
+                3, modal-footer
+
+            -->
+    <div class="container">
+        <div class="row">
+            <!-- 通过data-toggle指明会有模态框的出现，而data-target触发哪个模态框 -->
+            <button type="button" id="invoke-modal" class="btn btn-danger">通过js触发modal</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#modal-content">点击出现modal模态框</button>
+            <!-- fade是为了淡出淡入动画效果，删除也没事 -->
+            <div class="modal fade" id="modal-content">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                            <h1 class="modal-title">modal的标题</h1>
+                        </div>
+                        <div class="modal-body">
+                            <div>hello，我是modal-body</div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">保存</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../resources/js/jquery.js"></script>
+    <script src="../resources/js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            $("#invoke-modal").on("click", function () {
+                $("#modal-content").modal();
+                // $("#modal-content").on();
+                $("#modal-content").on('show.bs.modal',function(){
+                    console.log('modal显示show的时候触发');
+                });
+                $("#modal-content").on('shown.bs.modal',function(){
+                    console.log('modal显示show调用完毕之后的时候触发');
+                });
+
+                $("#modal-content").on('hide.bs.modal',function(){
+                    console.log('modal隐蔽调用的时候触发');
+                });
+                $("#modal-content").on('hidden.bs.modal',function(){
+                    console.log('modal隐蔽调用完成的时候触发');
+                });
+
+            })
+        });
+    </script>
+</body>
+
+</html>

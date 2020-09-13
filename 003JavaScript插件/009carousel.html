@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carousel轮播图</title>
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- 
+                图片必须在焦点或者左右按钮前面
+                父容器：
+                    1，class="carousel slide" id="parent"
+                    2，data-ride="carousel"表示页面加载完毕就开始图片的轮播
+                图片容器
+                    1，class="carousel-inner"，默认都隐藏图片
+                    图片
+                        class="item"
+                焦点容器
+                    1，class="carousel-indicators"
+                    单个焦点
+                        1，data-slide-to="0"
+                        2，data-target="parent"
+                左右按钮
+                    1，左边data-slide="pre"-前一张，右边next，后一张
+                    2，超链接标记href="parent"，button就用data-target="parent"
+                    3, class="left carousel-control" right
+                    4, <span>设置图标
+             -->
+            <div class="col-sm-6">
+
+                <!-- 父容器 -->
+                <div id="parent" class="carousel slide" data-ride="carousel">
+
+                    <!-- 图片 -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="../resources/img/001.png" alt="图片000">
+                        </div>
+                        <div class="item">
+                            <img src="../resources/img/003.jpg" alt="图片000">
+                        </div>
+                        <div class="item">
+                            <img src="../resources/img/002.jpg" alt="图片000">
+                        </div>
+                    </div>
+
+                    <!-- 焦点 -->
+                    <ol class="carousel-indicators">
+                        <li data-slide-to="0" data-target="#parent" class="active"></li>
+                        <li data-slide-to="1" data-target="#parent"></li>
+                        <li data-slide-to="2" data-target="#parent"></li>
+                    </ol>
+
+                    <!-- 左右按钮 -->
+                    <a class="left carousel-control" href="#parent" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#parent" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                    <!-- <a class="left carousel-control" href="#parent"  data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" ></span>
+                      </a>
+                      <a class="right carousel-control" href="#parent"  data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" ></span>
+                      </a> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../resources/js/jquery.js"></script>
+    <!-- <script src="./carousel.js"></script>
+    <script src="./transition.js"></script> -->
+    <script src="../resources/js/bootstrap.js"></script>
+</body>
+
+</html>

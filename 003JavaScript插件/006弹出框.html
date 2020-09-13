@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹出框</title>
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <button type="button" class="btn btn-danger" data-toggle="popover" data-content="hello, 声明内容，试试" title="声明标题" data-placement="bottom">弹出框</button>
+        </div>
+    </div>
+
+    
+    <script src="../resources/js/jquery.js"></script>
+    <script src="../resources/js/bootstrap.js"></script>
+
+    <script>
+        $(function(){
+            $('[data-toggle="popover"]').popover({
+                trigger: "focus",
+                title:"编程时标题",
+                content:"编程时内容"
+            });
+        });
+    </script>
+</body>
+
+</html>

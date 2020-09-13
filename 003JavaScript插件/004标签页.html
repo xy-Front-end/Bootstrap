@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签页</title>
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+
+            <!-- 
+                1，data-toggle就是声明js事件行为
+                2，
+             -->
+            <div>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+
+                    <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages" data-toggle="tab">Messages</a></li>
+                    <li><a href="#settings" data-toggle="tab">Settings</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">home...</div>
+                    <div role="tabpanel" class="tab-pane" id="profile">profile...</div>
+                    <div role="tabpanel" class="tab-pane" id="messages">message...</div>
+                    <div role="tabpanel" class="tab-pane" id="settings">settings...</div>
+                </div>
+
+            </div>
+
+
+
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#java">Java</a></li>
+                <li><a data-toggle="tab" href="#front-end">前端</a></li>
+                <li><a data-toggle="tab" href="#cloud">云计算</a></li>
+                <li><a data-toggle="tab" href="#security">网络安全</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <!-- <div class="tab-panel"></div> -->
+                <div class="tab-pane fade in active " id="java">Java</div>
+                <div class="tab-pane fade" id="front-end">前端</div>
+                <div class="tab-pane fade" id="cloud">云计算</div>
+                <div class="tab-pane fade" id="security">网络安全</div>
+            </div>
+
+
+            <div>
+                <ul class="nav nav-pills nav-justified">
+                    <li class="active"><a href="#one" data-toggle="tab">大人1</a></li>
+                    <li><a href="#two" data-toggle="tab">大人2</a></li>
+                    <li><a href="#three" data-toggle="tab">大人3</a></li>
+                </ul>
+
+                <!-- 显示的面板 -->
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="one">1</div>
+                    <div class="tab-pane fade " id="two">2</div>
+                    <div class="tab-pane fade " id="three">3</div>
+                </div>
+            </div>
+
+
+            <!-- 
+                编程的方法更换标签页 
+                1，不能在a标签中声明data-toggle
+            -->
+            <div>
+                <ul class="nav nav-tabs">
+                    <li><a href="#id1">星期1</a></li>
+                    <li><a href="#id2">星期2</a></li>
+                    <li><a href="#id3">星期3</a></li>
+                    <li><a href="#id4">星期4</a></li>
+                    <li><a href="#id5">星期5</a></li>
+                    <li><a href="#id6">星期6</a></li>
+                    <li><a href="#id7">星期7</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="id1" class="tab-pane fade">我是星期1</div>
+                    <div id="id2" class="tab-pane fade">我是星期2</div>
+                    <div id="id3" class="tab-pane fade">我是星期3</div>
+                    <div id="id4" class="tab-pane fade">我是星期4</div>
+                    <div id="id5" class="tab-pane fade">我是星期5</div>
+                    <div id="id6" class="tab-pane fade">我是星期6</div>
+                    <div id="id7" class="tab-pane fade">我是星期7</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../resources/js/jquery.js"></script>
+    <script src="../resources/js/bootstrap.js"></script>
+    <script>
+        // 编程的方法实现更换标签页
+        $(function () {
+            //显示面板
+            $(".nav a").on("click", function (e) {
+                e.preventDefault();
+                $(this).tab("show");
+                // show("tab");
+                console.log($(this).html(), '---');
+            });
+            //根据面板显示/隐藏前后打印消息
+            $(".nav a").on("show.bs.tab", function (e) {
+                console.log("target----",e.target);
+                console.log("relatedTarget----",e.relatedTarget);
+            });
+
+        });
+    </script>
+</body>
+
+</html>

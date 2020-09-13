@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collapse</title>
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>声明式用法</h1>
+            <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#content">点击隐藏&显示</button>
+            <div class="collapse" id="content">
+                <div class="well">
+                    hello，白皮猪
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" panel-group" id="panel-parent">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h2 class="panel-title " data-toggle="collapse" data-target="#back" data-parent="#panel-parent">
+                            <a href="#">撤退</a></h2>
+                    </div>
+                    <div class="panel-collpase">
+
+                        <div class="panel-body collapse in " id="back">
+                            body
+                            恒晶石的弗兰克斯的了开发法拉的斐林试剂弗兰克斯打积分
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        省得麻烦了胜多负少的footer
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h2 class="panel-title " data-toggle="collapse" data-target="#rest" data-parent="#panel-parent">
+                            <a href="#">休息</a></h2>
+                    </div>
+                    <div class="panel-body collapse" id="rest">
+                        body
+                        恒晶石的弗兰克斯的了开发法拉的斐林试剂弗兰克斯打积分
+                    </div>
+                    <div class="panel-footer">
+                        省得麻烦了胜多负少的footer
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h2 class="panel-title " data-toggle="collapse" data-target=".comeon"
+                            data-parent="#panel-parent"><a href="#">进攻</a></h2>
+                    </div>
+                    <div class="panel-body collapse comeon">
+                        body
+                        恒晶石的弗兰克斯的了开发法拉的斐林试剂弗兰克斯打积分
+                    </div>
+                    <div class="panel-footer">
+                        省得麻烦了胜多负少的footer
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>编程式用法，不建议这样说</h2>
+        </div>
+    </div>
+
+
+    <script src="../resources/js/jquery.js"></script>
+    <script src="../resources/js/bootstrap.js"></script>
+</body>
+
+</html>
